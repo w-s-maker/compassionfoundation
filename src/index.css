@@ -1,0 +1,73 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-cosmic-900 text-gray-100 font-body overflow-x-hidden transition-colors duration-500;
+  }
+}
+@layer components {
+  .glass-card {
+    @apply bg-glass-gradient-dark backdrop-blur-md border border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)] rounded-2xl;
+  }
+  .glass-card-light {
+    @apply bg-white/70 backdrop-blur-md border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.1)] rounded-2xl;
+  }
+  .text-glow {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.3);
+  }
+  .text-glow-purple {
+    text-shadow: 0 0 10px rgba(138, 43, 226, 0.5), 0 0 20px rgba(138, 43, 226, 0.3);
+  }
+  .holographic-hover {
+    position: relative;
+    overflow: hidden;
+  }
+  .holographic-hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: skewX(-20deg);
+    transition: left 0.5s ease;
+  }
+  .holographic-hover:hover::after {
+    left: 150%;
+  }
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-cosmic-900;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-cosmic-600 rounded-full border-2 border-cosmic-900;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-cosmic-500;
+}
+/* Light mode overrides */
+.light body {
+  @apply bg-[#f8f5fa] text-gray-800;
+}
+.light ::-webkit-scrollbar-track {
+  @apply bg-[#f8f5fa];
+}
+.light ::-webkit-scrollbar-thumb {
+  @apply bg-cosmic-500 border-[#f8f5fa];
+}
