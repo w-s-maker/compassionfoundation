@@ -31,6 +31,10 @@ export function Navbar() {
       href: '#impact'
     },
     {
+      name: 'Founder',
+      href: '#founder'
+    },
+    {
       name: 'Get Involved',
       href: '#get-involved'
     }],
@@ -51,6 +55,10 @@ export function Navbar() {
     {
       name: 'Athari',
       href: '#impact'
+    },
+    {
+      name: 'Mwanzilishi',
+      href: '#founder'
     },
     {
       name: 'Jihusishe',

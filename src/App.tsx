@@ -6,6 +6,7 @@ import { VisionMission } from './components/VisionMission';
 import { Programs } from './components/Programs';
 import { CoreValues } from './components/CoreValues';
 import { Impact } from './components/Impact';
+import { Founder } from './components/Founder';
 import { Scriptures } from './components/Scriptures';
 import { GetInvolved } from './components/GetInvolved';
 import { Gallery } from './components/Gallery';
@@ -25,6 +26,7 @@ export function App() {
         <Programs />
         <CoreValues />
         <Impact />
+        <Founder />
         <Scriptures />
         <GetInvolved />
         <Gallery />
